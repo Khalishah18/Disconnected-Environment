@@ -1,4 +1,6 @@
-﻿namespace Disconnected_Environment
+﻿using System;
+
+namespace Disconnected_Environment
 {
     partial class Form2
     {
@@ -30,7 +32,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.nmp = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -56,14 +58,15 @@
             this.textBox1.Size = new System.Drawing.Size(303, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // label1
+            // nmp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 354);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nama Prodi";
+            this.nmp.AutoSize = true;
+            this.nmp.Location = new System.Drawing.Point(138, 354);
+            this.nmp.Name = "nmp";
+            this.nmp.Size = new System.Drawing.Size(79, 16);
+            this.nmp.TabIndex = 2;
+            this.nmp.Text = "Nama Prodi";
+            this.nmp.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSave
             // 
@@ -114,7 +117,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nmp);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
@@ -130,10 +133,12 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label nmp;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnOpen;
+
+        public EventHandler Data_Prodi_Load { get; private set; }
     }
 }

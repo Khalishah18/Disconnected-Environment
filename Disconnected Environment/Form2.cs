@@ -20,7 +20,7 @@ namespace Disconnected_Environment
         private void refreshform()
         {
             nmp.Text = "";
-            nmp.Enable = false;
+            nmp.Enabled = false;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
@@ -73,12 +73,6 @@ namespace Disconnected_Environment
             }
         }
 
-        private void Data_Prodi_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'data_MahasiswaDataSet.Prodi' table. You can move, or remove it, as needed.
-            this.prodiTableAdapter.Fill(this.data_MahasiswaDataSet.Prodi);
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             refreshform();
@@ -107,6 +101,11 @@ namespace Disconnected_Environment
             Form1 hu = new Form1();
             hu.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

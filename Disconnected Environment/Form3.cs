@@ -90,8 +90,6 @@ namespace Disconnected_Environment
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'data_MahasiswaDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter.Fill(this.data_MahasiswaDataSet1.Mahasiswa);
             koneksi.Open();
             SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select m.nim, m.nama_mahasiswa, m.alamat, " +
                 "m.jenis_kelamin, m.tgl_lahir,p.nama_prodi From dbo.Mahasiswa, " +
@@ -149,7 +147,7 @@ namespace Disconnected_Environment
             da.Fill(ds);
             cmd.ExecuteReader();
             koneksi.Close();
-            cbxProdi.DisplayMember = "nama_prodi";
+            cbxProdi.DisplayMember= "nama_prodi";
             cbxProdi.ValueMember = "id_prodi";
             cbxProdi.DataSource = ds.Tables[0];
         }

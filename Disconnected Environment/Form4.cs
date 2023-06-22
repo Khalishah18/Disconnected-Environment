@@ -43,7 +43,7 @@ namespace Disconnected_Environment
             }
             else
             {
-                string queryString = "select Max(id_status) from dbo.status_mahasiswa";
+                string queryStrings = "select Max(id_status) from dbo.status_mahasiswa";
                 SqlCommand cmStatusMahasiswaSum = new SqlCommand(str, koneksi);
                 int totalStatusMahasiswa = (int)cmStatusMahasiswaSum.ExecuteScalar();
                 int finalKodeStatusInt = totalStatusMahasiswa + 1;
@@ -51,7 +51,7 @@ namespace Disconnected_Environment
             }
             string queryString = "insert into dbo.status_mahasiswa(id_status, nim, status_mahasiswa, tahun_masuk)" +
                 "values(@NIM, @sm, @tm)";
-            SqlCommand cmd = new SqlCommand(queryStrings, koneksi);
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
 
             cmd.Parameters.Add(new SqlParameter("ids", kodeStatus));
