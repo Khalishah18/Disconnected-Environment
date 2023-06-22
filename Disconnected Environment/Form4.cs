@@ -162,30 +162,7 @@ namespace Disconnected_Environment
             refreshform();
         }
 
-        private void FormDataStatusMahasiswa_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Form1 fm = new Form1();
-            fm.Show();
-            this.Hide();
-        }
-        private void dataProdiToolStriMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 fm = new Form2();
-            fm.Show();
-            this.Hide();
-        }
-        private void dataMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form3 fo = new Form3();
-            fo.Show();
-            this.Hide();
-        }
-        private void dataStatusMahasiswaToolStripMenuItem_Click(Object sender, EventArgs e)
-        {
-            Form4 fr = new Form4();
-            fr.Show();
-            this.Hide();
-        }
+        
         private void refreshform()
         {
             cbxNama.Enabled = false;

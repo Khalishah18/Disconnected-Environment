@@ -31,8 +31,8 @@ namespace Disconnected_Environment
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.nmp = new System.Windows.Forms.Label();
+            this.nmp = new System.Windows.Forms.TextBox();
+            this.LABEL = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -51,22 +51,24 @@ namespace Disconnected_Environment
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(232, 351);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 22);
-            this.textBox1.TabIndex = 1;
-            // 
             // nmp
             // 
-            this.nmp.AutoSize = true;
-            this.nmp.Location = new System.Drawing.Point(138, 354);
+            this.nmp.Location = new System.Drawing.Point(232, 351);
             this.nmp.Name = "nmp";
-            this.nmp.Size = new System.Drawing.Size(79, 16);
-            this.nmp.TabIndex = 2;
-            this.nmp.Text = "Nama Prodi";
-            this.nmp.Click += new System.EventHandler(this.label1_Click);
+            this.nmp.Size = new System.Drawing.Size(303, 22);
+            this.nmp.TabIndex = 1;
+            this.nmp.TextChanged += new System.EventHandler(this.nmp_TextChanged);
+            // 
+            // LABEL
+            // 
+            this.LABEL.AutoSize = true;
+            this.LABEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LABEL.Location = new System.Drawing.Point(109, 354);
+            this.LABEL.Name = "LABEL";
+            this.LABEL.Size = new System.Drawing.Size(97, 20);
+            this.LABEL.TabIndex = 2;
+            this.LABEL.Text = "Nama Prodi";
+            this.LABEL.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSave
             // 
@@ -117,12 +119,12 @@ namespace Disconnected_Environment
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.LABEL);
             this.Controls.Add(this.nmp);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
             this.Text = "Data Prodi";
-            this.Load += new System.EventHandler(this.Data_Prodi_Load);
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,8 +134,8 @@ namespace Disconnected_Environment
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label nmp;
+        private System.Windows.Forms.TextBox nmp;
+        private System.Windows.Forms.Label LABEL;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;

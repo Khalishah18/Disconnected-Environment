@@ -23,7 +23,7 @@ namespace Disconnected_Environment
         {
             InitializeComponent();
             koneksi = new SqlConnection(kstr);
-            this.bindingNavigator1.BindingSource = this.customersBindingSource;
+            this.bnMahasiswa.BindingSource = this.customersBindingSource;
             refreshform();
         }
 
@@ -90,6 +90,10 @@ namespace Disconnected_Environment
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            
+        }
+        private void FormDataMahasiswa_Load()
+        {
             koneksi.Open();
             SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select m.nim, m.nama_mahasiswa, m.alamat, " +
                 "m.jenis_kelamin, m.tgl_lahir,p.nama_prodi From dbo.Mahasiswa, " +
@@ -135,7 +139,7 @@ namespace Disconnected_Environment
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             clearBinding();
-            Form3_Load();
+            FormDataMahasiswa_Load();
         }
         private void Prodicbx()
         {
@@ -151,13 +155,6 @@ namespace Disconnected_Environment
             cbxProdi.ValueMember = "id_prodi";
             cbxProdi.DataSource = ds.Tables[0];
         }
-        private void FormDataMahasiswa_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Form1 fm = new Form1();
-            fm.Show();
-            this.Hide();
-        }
-
         private void Form3_Load()
         {
             throw new NotImplementedException();

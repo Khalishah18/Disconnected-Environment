@@ -96,14 +96,24 @@ namespace Disconnected_Environment
             btnOpen.Enabled = false;
         }
 
-        private void FormDataProdi_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormDataMahasiswa_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form1 hu = new Form1();
-            hu.Show();
+            Form1 fm = new Form1();
+            fm.Show();
             this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nmp_TextChanged(object sender, EventArgs e)
         {
 
         }
